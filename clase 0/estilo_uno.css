@@ -1,0 +1,43 @@
+body {
+    background-color: #7d7f80;
+}
+.divnegro{
+    height: 30vh;
+    width: 100%;
+    background-color: black;
+}
+
+.divrojo {
+    height: 7vh;
+    width: 100%;
+    background-color: rgb(254,50,101);
+}
+
+.contenedor {
+    background-color: rgb(152,152,152);
+}
+
+ul{
+    margin: 0%;
+    padding-left:25px;
+    padding-top:25px;  
+}
+
+li {
+    padding-left:290x;
+    padding-top:25px;
+    font-family: 'bold', sans-serif;
+    font-weight: 540;
+    size: 16px;
+    color: #000000;
+    list-style: inside;
+}
+
+li::before {
+    content: "•"; 
+    position: absolute;
+    left: 1.5%; 
+}
+li::marker {
+    content: none; 
+}

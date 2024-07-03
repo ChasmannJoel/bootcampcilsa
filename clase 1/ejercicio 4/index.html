@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="color-theme" rel="stylesheet" href="index.css">
+    <title>Ejercicio clase 1</title>
+</head>
+<body>
+    <h1>Datos personales</h1>
+    <form id= "myform " class="form" method="post">
+        <ul>
+            <li>
+              <label for=nombre">Nombre:</label>
+              <br>
+              <input type="text" id="nombre" name="user_nombre" />
+            </li>
+            <li>
+                <label for="apellido">Apellido:</label>
+                <br>
+                <input type="text" id="apellido" name="user_apellido" />
+              </li>
+            <li>
+              <label for="mail">E-mail:</label>
+              <br>
+              <input type="email" id="mail" name="user_mail" pattern=".+@example\.com" size="30" required />
+            </li>
+            <li>
+              <label for="fecha">Fecha de nacimiento: </label>
+              <br>
+              <input type="date" id="fecha" name="user_fecha" />
+            </li>
+            <li>
+                <label for="pais">Pais de residencia:</label>
+                <br>
+                <input type="text" id="pais" name="user_pais" />
+              </li>
+          </ul>
+          <button onclick="denegar()">Enviar</button>
+          <button id="mode" onclick="swapDayAndNight()">Dark Mode</button>
+    </form>
+    <script src="./index.js"></script>
+</body>
+</html>

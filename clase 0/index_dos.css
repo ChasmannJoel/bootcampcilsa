@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background-color: #6D6E70;
+    height: 50px; /* Adjust as necessary */
+}
+
+.cuadro-azul {
+    background-color: #002A3A;
+    height: 30px; /* Adjust as necessary */
+}
+
+.main {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #D3D3D3;
+    width: 20%; /* Adjust as necessary */
+}
+
+.main {
+    background-color: #FF4B4B;
+    flex: 1;
+}
+
+.footer {
+    background-color: #002A3A;
+    height: 20px; /* Adjust as necessary */
+}
