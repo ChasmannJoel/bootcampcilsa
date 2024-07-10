@@ -8,37 +8,38 @@
 </head>
 <body>
     <h1>Datos personales</h1>
-    <form id= "myform " class="form" method="post">
+    <form id="myform" class="form" method="post" role="form">
         <ul>
             <li>
-              <label for=nombre">Nombre:</label>
-              <br>
-              <input type="text" id="nombre" name="user_nombre" />
-            </li>
-            <li>
-                <label for="apellido">Apellido:</label>
+                <label id="nombre" for="nombre">Nombre:</label>
                 <br>
-                <input type="text" id="apellido" name="user_apellido" />
-              </li>
-            <li>
-              <label for="mail">E-mail:</label>
-              <br>
-              <input type="email" id="mail" name="user_mail" pattern=".+@example\.com" size="30" required />
+                <input type="text" id="nombre" name="nombre" aria-label="nombre" required />
             </li>
             <li>
-              <label for="fecha">Fecha de nacimiento: </label>
-              <br>
-              <input type="date" id="fecha" name="user_fecha" />
-            </li>
-            <li>
-                <label for="pais">Pais de residencia:</label>
+                <label id="label-apellido" for="apellido">Apellido:</label>
                 <br>
-                <input type="text" id="pais" name="user_pais" />
-              </li>
-          </ul>
-          <button onclick="denegar()">Enviar</button>
-          <button id="mode" onclick="swapDayAndNight()">Dark Mode</button>
+                <input type="text" id="apellido" name="user_apellido" aria-labelledby="label-apellido" required />
+            </li>
+            <li>
+                <label id="label-mail" for="mail">E-mail:</label>
+                <br>
+                <input type="email" id="mail" name="user_mail" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" size="30" aria-labelledby="label-mail" required />
+            </li>
+            <li>
+                <label id="label-fecha" for="fecha">Fecha de nacimiento:</label>
+                <br>
+                <input type="date" id="fecha" name="user_fecha" aria-labelledby="label-fecha" required />
+            </li>
+            <li>
+                <label id="label-pais" for="pais">País de residencia:</label>
+                <br>
+                <input type="text" id="pais" name="user_pais" aria-labelledby="label-pais" required />
+            </li>
+        </ul>
+        <button id="envio-form" type="submit" aria-label="Enviar formulario">Enviar</button>
+        <button id="mode" type="button"  aria-labelledby="label-mode">Dark Mode</button>
     </form>
     <script src="./index.js"></script>
 </body>
 </html>
+

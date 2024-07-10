@@ -1,12 +1,14 @@
 var element = document.getElementById('color-theme');
 var modo = document.getElementById('mode');
-var mail = document.getElementById('mail')
+var mail = document.getElementById('mail');
+const envioForm = document.getElementById('envio-form');
 var light_styles = 'index.css';
 var dark_styles  = 'dark-index.css';
 
+
 var theme = 'light';
 
-function swapDayAndNight()
+function swapDayAndNight(event)
 {
     event.preventDefault();
     if (theme == 'light') {
@@ -20,20 +22,18 @@ function swapDayAndNight()
     }
 }
 
-function denegar(){
+function denegar(event){
     event.preventDefault();
-    document.getElementById("myform").reset();
-    alert("Gracias por completar el formulario :) ")
+    const form = document.getElementById("myform");
+    if(form.checkValidity()){
+        form.reset();
+        alert("Gracias por completar el formulario :) ")
+    }
+    else {
+        alert("Error");
+        form.reportValidity();
+    }
 }
 
-function validarEmail(valor) {
-    if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
-     alert("La dirección de email " + valor + " es correcta!.");
-    } else {
-     alert("La dirección de email es incorrecta!.");
-    }   
-  }
-
-  mail.addEventListener('blur', function() {
-    validarEmail(mail.value);
-});
+envioForm.addEventListener('click', denegar)
+modo.addEventListener("click", swapDayAndNight);
